@@ -149,28 +149,31 @@ def run_test_draw_circles_from_rectangle():
     ####################################################################
     # ------------------------------------------------------------------
     title = 'Tests 1 and 2 of DRAW_CIRCLES_FROM_RECTANGULAR: '
-    title = title + ' 15 circles, 2 rectangles'
-    window1 = rg.RoseWindow(650, 350, title)
+    title = title + ' 8 blue in row, 3 in column; then 4 green in row, 5 in column'
+    window1 = rg.RoseWindow(720, 500, title)
 
-    rectangle = rg.Rectangle(rg.Point(600, 300), rg.Point(650, 350))
+    rectangle = rg.Rectangle(rg.Point(400, 250), rg.Point(440, 325))
     rectangle.fill_color = 'green'
-    rectangle.outline_color = 'blue'
-    draw_circles_from_rectangle(5, 1, rectangle, window1)
+    rectangle.outline_color = 'black'
+    rectangle.outline_thickness = 5
+    draw_circles_from_rectangle(4, 5, rectangle, window1)
 
-    rectangle = rg.Rectangle(rg.Point(600, 200), rg.Point(610, 220))
-    rectangle.fill_color = 'yellow'
-    rectangle.outline_color = 'blue'
-    draw_circles_from_rectangle(6, 3, rectangle, window1)
+    rectangle = rg.Rectangle(rg.Point(600, 400), rg.Point(500, 450))
+    rectangle.fill_color = 'blue'
+    rectangle.outline_color = 'red'
+    rectangle.outline_thickness = 3
+    draw_circles_from_rectangle(8, 3, rectangle, window1)
     window1.close_on_mouse_click()
 
     title = 'Test 3 of DRAW_CIRCLES_FROM_RECTANGULAR: '
-    title += ' 9 circles, 1 rectangle'
-    window2 = rg.RoseWindow(525, 300, title)
+    title += ' 6 yellow_filled row, 10 brown_outlined column'
+    window2 = rg.RoseWindow(620, 380, title)
 
-    rectangle = rg.Rectangle(rg.Point(350, 150), rg.Point(375, 166))
-    rectangle.fill_color = 'purple'
-    rectangle.outline_color = 'red'
-    draw_circles_from_rectangle(5, 4, rectangle, window2)
+    rectangle = rg.Rectangle(rg.Point(350, 280), rg.Point(375, 330))
+    rectangle.fill_color = 'yellow'
+    rectangle.outline_color = 'brown'
+    rectangle.outline_thickness = 5
+    draw_circles_from_rectangle(6, 10, rectangle, window2)
 
     window2.close_on_mouse_click()
 
